@@ -20,7 +20,7 @@ onion:
 	git clone --depth 1 https://github.com/davidmoreno/onion.git
 
 otemplate:
-	(cd onion/build/tools/otemplate/; make)
+	(cd onion/build/tools/otemplate/)
 
 base_html.c: otemplate base.html 
 	onion/build/tools/otemplate/otemplate base.html base_html.c
