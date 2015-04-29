@@ -13,7 +13,7 @@ clean:
 
 
 libonion_static.a: onion
-	(cd onion && mkdir -p build && cd build && cmake .. && cd src && make -j4)
+	(cd onion && mkdir -p build && cd build && cmake .. -DCMAKE_C_FLAGS="-Werror" -DCMAKE_CXX_FLAGS="-Werror" && make VERBOSE=1)
 	cp onion/build/src/onion/libonion_static.a .
 
 onion:
